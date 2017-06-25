@@ -1,0 +1,56 @@
+<div class="panel panel-info">
+
+<div class="panel-heading">Registration Form</div>
+<div class="panel-body">
+<div class="col-md-12" ng-controller="GameListController">
+		<table class="table table-stripped">
+			<thead>
+				<tr>
+				<th>Title</th>
+				<th>Genre</th>
+				<th>Platform</th>
+				<th>Score</th>
+				<tr>
+			<thead>
+			<tbody>
+				<tr>
+					<td><input type="text" class="form-control input-md" ng-model="search.title"/></td>
+					<td><input type="text" class="form-control input-md" ng-model="search.genre"/></td>
+					<td><input type="text" class="form-control input-md" ng-model="search.platform"/></td>
+					<td><input type="text" class="form-control input-md" ng-model="search.score"/></td>
+				</tr>
+				<tr>
+				<td>Sort By:</td>
+				<td>Sort By:</td>
+				<td>Sort By:</td>
+				<td>Sort By:</td>
+				</tr>
+				<tr>
+					<td><button class="btn" ng-click="sortBy('title')">title</button></td>
+					<td><button class="btn" ng-click="sortBy('genre')">Genre</button></td>
+					<td><button class="btn" ng-click="sortBy('platform')">Platform</button></td>
+					<td><button class="btn" ng-click="sortBy('score')">Score</button></td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table table-stripped">
+			<thead>
+				<tr>
+				<th>Title</th>
+				<th>Genre</th>
+				<th>Platform</th>
+				<th>Score</th>
+				<tr>
+			<thead>
+			<tbody>
+				<tr ng-repeat="game in games | filter:search:strict | orderBy:propertyName:reverse">
+					<td>{{game.title}}</td>
+					<td>{{game.genre}}</td>
+					<td>{{game.platform}}</td>
+					<td>{{game.score}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</div>
+	</div>

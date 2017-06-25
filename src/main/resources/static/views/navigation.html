@@ -1,0 +1,18 @@
+<div class="navbar navbar-success" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand"><i class="glyphicon glyphicon-screenshot"></i> GamersDeck</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav pull-right">
+            <li class="active" ng-show="isAuthenticated()"><a data-ui-sref="home"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+            <li ng-show="isAuthenticated()"><a>Welcome {{username}}</a></li>
+            <li ng-show="isAuthenticated()"><a style="cursor:pointer;" ng-click="logout()"><i class="glyphicon glyphicon-user"></i> Logout</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" ng-show="false">Link</a></li>
+        </ul>
+    </div>
+</div>
